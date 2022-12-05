@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.19-pr16">
+
+    
+  <!-- Spot Style - Default Point Spot Style -->
+
+
+  <style name="IconDefaultPointSpotStyle"
+         url="%FIRSTXML%/spots/ui_spot_move_user_defaultpoint0.png"
+         visible="false"
+         edge="center"
+         alpha="0.8"
+         onhover="onhoverIconDefaultPointSpotStyle"
+         onover="onoverIconDefaultPointSpotStyle"
+         onout="onoutIconDefaultPointSpotStyle"
+
+
+         />
+  <action name="onhoverIconDefaultPointSpotStyle">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoverIconDefaultPointSpotStyle">
+tween(scale, 1.2);
+tween(alpha, 1);
+pauseautorotation(forcehotspot);
+
+  </action>
+  <action name="onoutIconDefaultPointSpotStyle">
+    hideTooltip();
+    tween(scale, 1);
+    tween(alpha, 0.8);
+resumeautorotation(forcehotspot);
+
+  </action>
+
+
+
+</krpano>
